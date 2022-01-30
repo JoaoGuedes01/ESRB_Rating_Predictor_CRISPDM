@@ -4,6 +4,7 @@ import numpy as np
 
 app = Flask(__name__, template_folder='HTML')
 model = joblib.load('model/model.pkl')
+port = int(os.environ.get('PORT', 33507))
 
 print('Model Imported')
 print('Atributes:\n\nClasses:{}\n\nTraining Samples:{}\n\nTraining Features:{}\n\nIterations:{}\n\nLayers:{}\n\nOutputs:{}'.format(model.classes_,model.t_,model.n_features_in_, model.n_iter_, model.n_layers_, model.n_outputs_))
@@ -73,6 +74,6 @@ def sendData():
     return {'status':200, 'message':finalres, 'desc':desc}
 
 if __name__ == '__main__':
-    app.run();
+    app.run(port);
 
 
