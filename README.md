@@ -1,6 +1,7 @@
 # Algoritmo de Machine Learning para Previsão de Ratings
 
-Este projeto foi realizado no âmbito da cadeira de Aprendizagem automárica em Sistemas Empresariais no curso de MiEGSI. O objetivo do projeto é a familiarização com conceitos de machine learning utilizando a metodologia CRISP-DM de forma a criar um algoritmo capaz de prever o Rating ESRB de um jogo dados o resto dos dados como o caráter assuntual do jogo.
+<p>Este projeto foi realizado no âmbito da cadeira de Aprendizagem automárica em Sistemas Empresariais no curso de MiEGSI. O objetivo do projeto é a familiarização com conceitos de machine learning utilizando a metodologia CRISP-DM de forma a criar um algoritmo capaz de prever o Rating ESRB de um jogo dados o resto dos dados como o caráter assuntual do jogo.</p>
+<p>Para dar o projeto como finalizado tomamos a liberdade de implementar o modelo desenvolvido numa API Web de forma a poder ser utilizada por toda a gente e como "Proof of Concept" do nosso trabalho</p>
 
 ## Description
 
@@ -66,11 +67,11 @@ Na avaliação dos resultados iremos analisar os resultados obtidos e retirar as
 * Pandas
 * Scikit-learn (SKLearn)
 
-### Installing (Com recurso à CLI)
+### Installing (Jupyter Notebook)
 
 * Clonar o repositório
 ```
-git clone https://github.com/JoaoGuedes01/iti-docker-cluster.git
+git clone https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM.git
 ```
 * Iniciar o serviço do Jupyter
 ```
@@ -78,6 +79,21 @@ Na diretoria onde se encontra o notebook correr
 jupyter notebook
 ```
 No final é apenas necessário navegar até ao notebook onde terá disponível todos os métodos separados convenientemente por divisões que poderá correr e explorar.
+
+### Installing (Web API)
+
+* Clonar o repositório
+```
+git clone https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM.git
+```
+
+* Correr a aplicação app
+```
+python app.py
+```
+<p>Esta aplicação irá importar e carregar o modelo da pasta <b>model</b> e torna-lo utilizável através de pedidos HTTP, assim como disponibilizar uma interface gráfica onde é possível experimentar o modelo.</p>
+<p>Após correr o ficheiro <b>app.py</b> pode dirigir-se a <b>http://localhost:33507</b> para aceder à interface gráfica</p>
+
 
 ## Help
 
