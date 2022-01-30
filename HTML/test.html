@@ -27,12 +27,13 @@
         }
 
         const ClearInputFields = () => {
-            document.getElementById("username").value = "";
+            document.getElementById("gamename").value = "";
             document.getElementById("content").value = "";
         }
 
         const submitPost = async () => {
             let data = {}
+            let gameName = document.getElementById("gamename").value;
             if (document.getElementById('nds').checked) {
                 data['no_descriptors'] = 1;
             } else {
@@ -213,7 +214,7 @@
             const content = await rawResponse.json();
             console.log(content);
             document.getElementById('descResDiv').innerHTML = content.desc
-            document.getElementById('valueResDiv').innerHTML = 'O seu jogo obteve uma classificação de ' + content.message;
+            document.getElementById('valueResDiv').innerHTML = 'O jogo <b>' + gameName + '</b> obteve uma pontuação de <b>' + content.message + '</b>';
 
 
             //if (content.status != 200) alert("There was an error");
@@ -236,7 +237,7 @@
             <form style="width: 30rem; margin: 1.5rem;">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nome</label>
-                    <input type="email" class="form-control" id="username" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="gamename" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Nome do Jogo</div>
                 </div>
 
@@ -655,9 +656,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <b>
-                        <p id="valueResDiv"></p>
-                    </b>
+
+                    <p id="valueResDiv"></p>
+
                     <p id="descResDiv"></p>
                     <br><br><br><br><br><br><br><br><br><br>
                     <p>Obrigado por utilizar a nossa API, equipa 103 AASE</p>

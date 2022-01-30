@@ -59,16 +59,16 @@ def sendData():
     desc = ''
     if predictedRating == 0:
        finalres = 'E'
-       desc = 'O Rating E é isto e aquilo'
+       desc = 'Os títulos classificados como E (Todos) têm conteúdo que pode ser adequado para pessoas com 6 anos ou mais. Os títulos nesta categoria podem conter um mínimo de desenho animado, fantasia ou violência leve e/ou uso infrequente de linguagem leve.'
     if predictedRating == 1:
        finalres = 'ET'
-       desc = 'O Rating ET é isto e aquilo'
+       desc = 'A classificação ESRB E10+ (Todos com mais de 10 anos) indica que o conteúdo é geralmente adequado para maiores de 10 anos e pode conter mais desenhos animados, fantasia ou violência leve ou temas sugestivos mínimos. Nenhuma dessas classificações, nem qualquer outra classificação etária atribuída pela ESRB, no entanto, indica que um jogo ou aplicativo é direcionado a Crianças para fins da COPPA.'
     if predictedRating == 2:
        finalres = 'T'
-       desc = 'O Rating T é isto e aquilo'
+       desc = 'Os títulos classificados como T (Teen) têm conteúdo que pode ser adequado para maiores de 13 anos. Os títulos nesta categoria podem conter violência, temas sugestivos, humor grosseiro, sangue mínimo, jogos de azar simulados e/ou uso infrequente de linguagem forte.'
     if predictedRating == 3:
        finalres = 'M'
-       desc = 'O Rating M é isto e aquilo'
+       desc = 'Os títulos classificados como M (Adulto) têm conteúdo que pode ser adequado para pessoas com 17 anos ou mais. Os títulos nesta categoria podem conter violência intensa, sangue e violência, conteúdo sexual e/ou linguagem forte.'
 
     return {'status':200, 'message':finalres, 'desc':desc}
 
