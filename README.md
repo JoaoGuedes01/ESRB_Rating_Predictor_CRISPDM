@@ -2,6 +2,7 @@
 
 <p>Este projeto foi realizado no âmbito da cadeira de Aprendizagem automárica em Sistemas Empresariais no curso de MiEGSI. O objetivo do projeto é a familiarização com conceitos de machine learning utilizando a metodologia CRISP-DM de forma a criar um algoritmo capaz de prever o Rating ESRB de um jogo dados o resto dos dados como o caráter assuntual do jogo.</p>
 <p>Para dar o projeto como finalizado tomamos a liberdade de implementar o modelo desenvolvido numa API Web de forma a poder ser utilizada por toda a gente e como "Proof of Concept" do nosso trabalho</p>
+<p>Pode encontrar a implementação atual do nosso modelo em <a>https://esrb-rating-predictor.herokuapp.com/</a></p>
 
 ## Description
 
