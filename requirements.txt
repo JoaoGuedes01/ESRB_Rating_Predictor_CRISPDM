@@ -1,3 +1,4 @@
-Flask
-joblib
-numpy
+Flask==2.0.2
+joblib==1.0.1
+numpy==1.21.4
+gunicorn
