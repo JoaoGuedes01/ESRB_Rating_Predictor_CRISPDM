@@ -14,7 +14,7 @@
   <script>
     const domain = window.location.host
     const navigateToPage = (param) => {
-      let dest = 'http://'+domain +'/'+param
+      let dest = window.location.origin +'/'+param
       window.location.replace(dest);
     }
   </script>
