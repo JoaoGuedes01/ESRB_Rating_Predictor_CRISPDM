@@ -54,12 +54,17 @@
             placeHolder.append(alertDiv);
         }
 
+        const SetLoading = () => {
+            document.getElementById('modalbody').innerHTML = '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>';
+        }
+
         const ClearInputFields = () => {
             document.getElementById("gamename").value = "";
             document.getElementById("content").value = "";
         }
 
         const submitPost = async () => {
+            SetLoading();
             let data = {}
             let gameName = document.getElementById("gamename").value;
             if (document.getElementById('nds').checked) {
@@ -244,6 +249,7 @@
             });
             const content = await rawResponse.json();
             console.log(content);
+            document.getElementById('modalbody').innerHTML = '<p id="valueResDiv"></p><br><p id="descResDiv"></p><br><p>Obrigado por utilizar a nossa API, equipa 103 AASE</p>'
             document.getElementById('descResDiv').innerHTML = content.desc
             document.getElementById('valueResDiv').innerHTML = 'O jogo <b>' + gameName + '</b> obteve uma pontuação de <b>' + content.message + '</b>.';
             document.getElementById('modelName').innerHTML = localStorage.getItem('model');
@@ -724,7 +730,8 @@
                 <div class="dropdown">
                     <div>
                         <b><label class="form-label">Algoritmo de Previsão</label></b><br>
-                        <label class="form-label">Selecione o algoritmo que pretende utilizar para efetuar a previsão</label>
+                        <label class="form-label">Selecione o algoritmo que pretende utilizar para efetuar a
+                            previsão</label>
                     </div>
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="algorithmSelectionDropdown"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -768,15 +775,17 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Previsão do Modelo - <a id="modelName"><a/></h5>
+                    <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Previsão do Modelo - <a
+                            id="modelName"><a /></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-
+                <div class="modal-body" id="modalbody">
+                    <!--
                     <p id="valueResDiv"></p><br>
-
                     <p id="descResDiv"></p><br>
                     <p>Obrigado por utilizar a nossa API, equipa 103 AASE</p>
+                    -->
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
