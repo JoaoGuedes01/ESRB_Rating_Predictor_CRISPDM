@@ -14,7 +14,7 @@
   <script>
     const domain = window.location.host
     const navigateToPage = (param) => {
-      let dest = window.location.origin +'/'+param
+      let dest = window.location.origin + '/' + param
       window.location.replace(dest);
     }
   </script>
@@ -30,13 +30,35 @@
   <div style="display: flex; justify-content: center;">
     <button onclick="navigateToPage('predict')" style="margin-right: 1rem;" type="button"
       class="btn btn-primary">Utilizar a API</button>
-    <button onclick="window.location.href='https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM'" style="background-color: red; border-color: red;" type="button"
-      class="btn btn-primary">Sobre o Projeto</button>
+    <button onclick="window.location.href='https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM'"
+      style="background-color: red; border-color: red;" type="button" class="btn btn-primary">Sobre o Projeto</button>
   </div>
+  <div style="display: flex; justify-content: center; margin-top: 1rem;">
+    <button onclick="navigateToPage('docs')" style="background-color: #2e2e2e; border: none;" type="button"
+      class="btn btn-primary">Documentação</button>
+  </div>
+
+  <div style="display:flex; justify-content: center;">
+    <div style="position: absolute; bottom: 0; margin-bottom: 2rem;">
+      <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+        <h1 class="display-4">Dashboards e Resultados</h1>
+      </div>
+      <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+        <h6 class="display-7">Estes resultados foram obtidos com o nosso algortimo de escolha MLP Classifier (Redes
+          Neuronais)</h6>
+      </div>
+      <div style="display: flex; justify-content: center; margin-top: 1rem;">
+        <button onclick="navigateToPage('prevCustDash')"
+          style="background-color: #2e2e2e; border: none; margin-right: 0.5rem;" type="button"
+          class="btn btn-primary">Previsões do Modelo</button>
+        <button onclick="navigateToPage('prevCustDash')"
+          style="background-color: #2e2e2e; border: none; margin-left: 0.5rem;" type="button"
+          class="btn btn-primary">Previsões de Custos</button>
+      </div>
+    </div>
+  </div>
+
+
 </body>
-
-<div style="position: absolute; bottom: 0;" id="serverNumber">
-
-</div>
 
 </html>
