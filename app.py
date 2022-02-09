@@ -19,6 +19,18 @@ def index():
 def test():
     return render_template('test.html')
 
+@app.route('/prevCustDash')
+def dashPrevCust():
+    return render_template('dash1.html')
+
+@app.route('/prevsDash')
+def dashPrevs():
+    return render_template('dash2.html')
+
+@app.route('/docs')
+def docs():
+    return render_template('docs.html')
+
 # Rotas Backend
 @app.route('/sendData', methods=['POST'])
 def sendData():
