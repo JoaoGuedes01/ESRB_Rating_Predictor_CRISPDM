@@ -58,6 +58,13 @@ Posto isto, como o grupo pretende manter a percentagem de cada classe da variáv
 Na avaliação dos resultados iremos analisar os resultados obtidos e retirar as conclusões que forem necessárias. Comparar os resultados obtidos com os resultados previstos/esperados é necessário para averiguar o sucesso obtido.
 ```
 
+### Deplyment 
+```
+A fase de deployment consiste em utilizar o/s modelo/s obtido/s nas fases anteriores, completos, treinados, otimizados num ambiente de produção onde os seus outputs criarão valor para a organização em questão.
+Em relação ao nosso projeto iremos exportar o modelo que obtivémos através das fases anteriores do CRISP-DM, modelo este que está pronto a ser utilizado para fazer previsões de dados.
+No nosso caso exportámos o modelo e utilizámo-lo, quer na previsão dos dados acima de 2019 (para poder analisar os resultados), quer na criação de uma Web API que recebe parâmetros de jogos e utiliza o modelo para prever o respetivo rating para poder enviar a resposta prevista.
+```
+
 ## Getting Started
 
 ### Dependencies
@@ -67,6 +74,7 @@ Na avaliação dos resultados iremos analisar os resultados obtidos e retirar as
 * Jupyter Notebooks
 * Pandas
 * Scikit-learn (SKLearn)
+* Flask
 
 ### Installing (Jupyter Notebook)
 
@@ -76,7 +84,7 @@ git clone https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM.git
 ```
 * Iniciar o serviço do Jupyter
 ```
-Na diretoria onde se encontra o notebook correr
+cd jupyter-notebooks
 jupyter notebook
 ```
 No final é apenas necessário navegar até ao notebook onde terá disponível todos os métodos separados convenientemente por divisões que poderá correr e explorar.
