@@ -2,63 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESRB Predictor API</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script>
-    const domain = window.location.host
-    const navigateToPage = (param) => {
-      let dest = window.location.origin + '/' + param
-      window.location.replace(dest);
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESRB Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0d6efd !important;
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .ml-grid {
+            display: grid;
+        }
+    </style>
 </head>
 
 <body>
-  <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
-    <h1 class="display-4">ESRB Predictor API</h1>
-  </div>
-  <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
-    <h6 class="display-7">API que utiliza Machine Learning para prever o ESRB Rating de jogos</h6>
-  </div>
-  <div style="display: flex; justify-content: center;">
-    <button onclick="navigateToPage('predict')" style="margin-right: 1rem;" type="button"
-      class="btn btn-primary">Utilizar a API</button>
-    <button onclick="window.location.href='https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM'"
-      style="background-color: red; border-color: red;" type="button" class="btn btn-primary">Sobre o Projeto</button>
-  </div>
-  <div style="display: flex; justify-content: center; margin-top: 1rem;">
-    <button onclick="navigateToPage('docs')" style="background-color: #2e2e2e; border: none;" type="button"
-      class="btn btn-primary">Documentação</button>
-  </div>
+    <div
+        style="background-color: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); overflow: hidden; width: 800px; max-width: 100%;">
+        <div style="border-bottom: 1px solid #f0f0f0; background-color: #f7f7f7; padding: 20px 40px; text-align:center">
+            <h2>Bem-Vindo à Nossa Aplicação</h2>
+        </div>
 
-  <div style="display:flex; justify-content: center;">
-    <div style="position: absolute; bottom: 0; margin-bottom: 2rem;">
-      <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
-        <h1 class="display-4">Dashboards e Resultados</h1>
-      </div>
-      <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
-        <h6 class="display-7">Estes resultados foram obtidos com o nosso algortimo de escolha MLP Classifier (Redes
-          Neuronais)</h6>
-      </div>
-      <div style="display: flex; justify-content: center; margin-top: 1rem;">
-        <button onclick="navigateToPage('prevsDash')"
-          style="background-color: #2e2e2e; border: none; margin-right: 0.5rem;" type="button"
-          class="btn btn-primary">Previsões do Modelo</button>
-        <button onclick="navigateToPage('prevCustDash')"
-          style="background-color: #2e2e2e; border: none; margin-left: 0.5rem;" type="button"
-          class="btn btn-primary">Previsões de Custos</button>
-      </div>
+        <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+            <h3>ESRB Predictor API</h3>
+        </div>
+
+        <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+            <h6 class="display-7">API que utiliza Machine Learning para prever o ESRB Rating de jogos</h6>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <a href="/predict" style="margin-right: 1rem;" class="btn btn-primary">Prever Jogo</a>
+            <a href="https://github.com/JoaoGuedes01/ESRB_Rating_Predictor_CRISPDM"
+                style="background-color: #2e2e2e; border-color: #2e2e2e; margin-left: 0.5rem;" class="btn btn-primary">GitHub</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <b>─────────────────────────</b>
+        </div>
+
+        <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+            <h3>Dashboards</h3>
+        </div>
+
+        <div style=" margin: 2rem 2rem 2rem 2rem; display: flex; justify-content: center;">
+            <h6 class="display-7">Estes resultados foram obtidos com o nosso algortimo de escolha MLP Classifier
+                (Redes
+                Neuronais)</h6>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <a href="/dashboard/cost-prediction" style="background-color: #2e2e2e; border: #2e2e2e;"
+                class="btn btn-primary">Previsões de Custos</a>
+            <a href="/dashboard/esrb-prediction" style="background-color: #2e2e2e; border: #2e2e2e; margin-left: 1.5rem;"
+                class="btn btn-primary">Previsões do Modelo</a>
+        </div>
+        <br>
     </div>
-  </div>
-
-
 </body>
 
 </html>

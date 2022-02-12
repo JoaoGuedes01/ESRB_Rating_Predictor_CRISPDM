@@ -14,33 +14,28 @@ app = Flask(__name__, template_folder='HTML')
 def index():
     return render_template('index.html')
 
-
 @app.route('/predict')
 def test():
-    return render_template('test.html')
+    return render_template('predict.html')
 
-@app.route('/prevCustDash')
+@app.route('/dashboard/cost-prediction')
 def dashPrevCust():
-    return render_template('dash1.html')
+    return render_template('dash-cost-prediction.html')
 
-@app.route('/prevsDash')
+@app.route('/dashboard/esrb-prediction')
 def dashPrevs():
-    return render_template('dash2.html')
-
-@app.route('/docs')
-def docs():
-    return render_template('docs.html')
+    return render_template('dash-esrb-prediction.html')
 
 # Rotas Backend
-@app.route('/sendData', methods=['POST'])
+@app.route('/api/predict', methods=['POST'])
 def sendData():
    # Get Data from Request
     json_data = request.json
 
     # Select Model
     json_model = json_data['model']
-    print(' selecting models/{}.pkl'.format(json_model))
-    model = joblib.load('models/{}.pkl'.format(json_model))
+    print('selecting jupyterNotebooks/models/{}.pkl'.format(json_model))
+    model = joblib.load('jupyterNotebooks/models/{}.pkl'.format(json_model))
 
     # ML Parameters from Request
     no_descriptors = json_data['no_descriptors']
