@@ -371,29 +371,6 @@
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[:Measure Names]' palette='red_gold_10_0' type='palette'>
-            <map to='#b71d3e'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:development_cost:qk]&quot;</bucket>
-            </map>
-            <map to='#b71d3e'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:marketing_cost:qk]&quot;</bucket>
-            </map>
-            <map to='#b71d3e'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:production_cost:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[:Measure Names]&quot;</bucket>
-            </map>
-            <map to='#f4d166'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_development_cost:qk]&quot;</bucket>
-            </map>
-            <map to='#f4d166'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_marketing_cost:qk]&quot;</bucket>
-            </map>
-            <map to='#f4d166'>
-              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_production_cost:qk]&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:esrb_rating:nk]' palette='red_gold_10_0' type='palette'>
             <map to='#b71d3e'>
               <bucket>&quot;M&quot;</bucket>
@@ -420,6 +397,29 @@
             </map>
             <map to='#fa8f4d'>
               <bucket>&quot;ET&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' palette='red_gold_10_0' type='palette'>
+            <map to='#b71d3e'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:development_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#b71d3e'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:marketing_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#b71d3e'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:production_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[:Measure Names]&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_development_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_marketing_cost:qk]&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;[federated.1wwbnbb05vvoz51446up30lxgji3].[sum:new_production_cost:qk]&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1719,6 +1719,11 @@
                 <run>ESRB Rating</run>
               </formatted-text>
             </format>
+            <format attr='title' field='[federated.1wwbnbb05vvoz51446up30lxgji3].[tyr:release_date:ok]' value='Ano de Lançamento'>
+              <formatted-text>
+                <run>Ano de Lançamento</run>
+              </formatted-text>
+            </format>
           </style-rule>
         </style>
         <panes>
@@ -2467,8 +2472,8 @@
           </layout-options>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='93' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98118' id='92' param='vert' type-v2='layout-flow' w='99058' x='471' y='941'>
+            <zone h='100000' id='95' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98118' id='94' param='vert' type-v2='layout-flow' w='99058' x='471' y='941'>
                 <zone h='6588' id='24' type-v2='title' w='100000' x='0' y='0'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2665,8 +2670,8 @@
           </layout-options>
           <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='88' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98118' id='87' param='vert' type-v2='layout-flow' w='99058' x='471' y='941'>
+            <zone h='100000' id='90' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98118' id='89' param='vert' type-v2='layout-flow' w='99058' x='471' y='941'>
                 <zone h='6588' id='13' type-v2='title' w='99058' x='471' y='941'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3083,6 +3088,7 @@
         </edge>
         <edge name='right'>
           <strip size='169'>
+            <card param='[federated.1wwbnbb05vvoz51446up30lxgji3].[tyr:release_date:ok]' type='filter' />
             <card param='[federated.1wwbnbb05vvoz51446up30lxgji3].[none:console_description:nk]' type='filter' />
             <card pane-specification-id='0' param='[federated.1wwbnbb05vvoz51446up30lxgji3].[none:pred_esrb_rating:nk]' type='color' />
           </strip>
@@ -3284,7 +3290,7 @@
       </viewpoint>
       <simple-id uuid='{779F6233-3AC8-4919-9938-7623EC6ED6B3}' />
     </window>
-    <window class='dashboard' name='Previsões de Custos'>
+    <window class='dashboard' maximized='true' name='Previsões de Custos'>
       <viewpoints>
         <viewpoint name='P Custo Desen'>
           <zoom type='entire-view' />
@@ -3304,7 +3310,7 @@
       <active id='-1' />
       <simple-id uuid='{078A642A-A511-4E82-8E3C-1D89EB1CC88C}' />
     </window>
-    <window class='dashboard' maximized='true' name='Previsões de ESRB'>
+    <window class='dashboard' name='Previsões de ESRB'>
       <viewpoints>
         <viewpoint name='P Pie Taxa de Acerto' />
         <viewpoint name='P Pie Taxa de Erro' />
