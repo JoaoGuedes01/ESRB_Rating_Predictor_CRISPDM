@@ -34,8 +34,8 @@ def sendData():
 
     # Select Model
     json_model = json_data['model']
-    print('selecting jupyterNotebooks/models/{}.pkl'.format(json_model))
-    model = joblib.load('jupyterNotebooks/models/{}.pkl'.format(json_model))
+    print('selecting jupyter-notebooks/models/{}.pkl'.format(json_model))
+    model = joblib.load('jupyter-notebooks/models/{}.pkl'.format(json_model))
 
     # ML Parameters from Request
     no_descriptors = json_data['no_descriptors']
